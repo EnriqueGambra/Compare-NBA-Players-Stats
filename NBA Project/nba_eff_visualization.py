@@ -28,4 +28,4 @@ for player in all_players:
     players.append(player)
 
 with open(filename, 'w') as f:
-    json.dump(players, f)
+    json.dump(players, f, indent=4)
