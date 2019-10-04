@@ -9,5 +9,6 @@ players = list()
 for player in all_players:
     players.append(player)
 
+# Dumps the file into a readable format
 with open(filename, 'w') as f:
     json.dump(players, f, indent=4)

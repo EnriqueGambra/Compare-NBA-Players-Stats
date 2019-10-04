@@ -1,20 +1,19 @@
-from nba_api.stats.endpoints import commonplayerinfo
-from nba_api.stats.static import players
-import json
+from get_id import GetID
 
-data = commonplayerinfo.CommonPlayerInfo(player_id=2544, timeout=100)
+num_of_players = int(input("Welcome! Please enter the number of players you'd like to analyze." +
+                           " You can only analyze up to 10: "))
 
-with open('data/readable_LBJ.json') as f:
-    data_json = json.load(f)
+players_IDs, players_names = [], []
+for number in range(num_of_players):
+    player_name = input("Enter in a player's full name to receive their data. You can quit at any time. Just enter 'q': ")
 
-specific_data_rowHeaders = data_json["resultSets"][0]['headers']
-specific_data_rowSet = data_json["resultSets"][0]['rowSet'][0]
+    if player_name == 'q':
+        break
+    else:
+        instance = GetID(player_name)
+        player_id = instance.find_id()
 
-player_data = list()
-header_data = list()
+        players_IDs.append(player_id)
+        players_names.append(player_name)
 
-for row in specific_data_rowSet:
-    player_data.append(row)
-
-for row in specific_data_rowHeaders:
-    header_data.append(row)
+print(players_IDs, players_names)
