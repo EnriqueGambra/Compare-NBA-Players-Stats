@@ -10,6 +10,7 @@ class GetID:
         self.filename = 'data/all_players.json'
 
     def find_id(self):
+        """Method that uses a players name, finds the ID of that player, and returns the ID"""
         with open(self.filename) as f:
             players_data = json.load(f)
 

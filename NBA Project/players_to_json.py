@@ -5,6 +5,7 @@ filename = 'data/all_players.json'
 all_players = players.get_players()
 
 players = list()
+
 # All players is a list in a dictionary
 for player in all_players:
     players.append(player)
