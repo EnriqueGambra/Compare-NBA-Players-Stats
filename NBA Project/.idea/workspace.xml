@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86a793b0-629d-4532-a622-961e36be8f91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/get_id.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_id.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nba_eff_visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/nba_eff_visualization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/players_to_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/players_to_json.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nba_eff_visualization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state relative-caret-position="94">
+              <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -95,9 +93,9 @@
       <list>
         <option value="$PROJECT_DIR$/find_players.py" />
         <option value="$PROJECT_DIR$/sample_LBJ.py" />
-        <option value="$PROJECT_DIR$/nba_eff_visualization.py" />
         <option value="$PROJECT_DIR$/players_to_json.py" />
         <option value="$PROJECT_DIR$/get_id.py" />
+        <option value="$PROJECT_DIR$/nba_eff_visualization.py" />
       </list>
     </option>
   </component>
@@ -313,8 +311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nba_eff_visualization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state relative-caret-position="94">
+          <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
         </state>
       </provider>
     </entry>
