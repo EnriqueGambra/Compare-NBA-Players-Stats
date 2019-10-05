@@ -45,10 +45,10 @@ class GetStats:
             assists.append(ast)
             field_goal_pct.append(fg_pct)
 
-        avg_points = sum(points) / len(points)
-        avg_rebounds = sum(rebounds) / len(rebounds)
-        avg_assists = sum(assists) / len(assists)
-        avg_fg_pct = sum(field_goal_pct) / len(field_goal_pct)
+        avg_points = round(sum(points) / len(points), 1)
+        avg_rebounds = round(sum(rebounds) / len(rebounds), 1)
+        avg_assists = round(sum(assists) / len(assists), 1)
+        avg_fg_pct = round((sum(field_goal_pct) / len(field_goal_pct)) * 100, 1)
 
         self.stats_dict = {
             'PTS': avg_points,
