@@ -34,10 +34,14 @@ for number in range(num_of_players):
             get_stats_instance = GetStats(player_id)
             players_stats.append(get_stats_instance.stats_dict)
 
+for player in players_stats:
+    all_stats.append(f"PTS: {player['PTS']} REB: {player['REB']} AST: {player['AST']}, FG PCT: {player['FG_PCT']}")
+
 data = [{
     'type': 'bar',
     'x': players_names,
     'y': [player['PTS'] for player in players_stats],
+    'hovertext': all_stats,
     'marker':
         {
             'color': 'rgb(60, 100, 150)',
