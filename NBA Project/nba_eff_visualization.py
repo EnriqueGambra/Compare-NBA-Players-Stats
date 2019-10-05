@@ -27,5 +27,3 @@ for number in range(num_of_players):
         else:
             players_IDs.append(player_id)
             players_names.append(player_name)
-
-print(players_IDs, players_names)
