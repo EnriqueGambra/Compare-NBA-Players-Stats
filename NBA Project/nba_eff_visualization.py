@@ -1,6 +1,7 @@
 from get_id import GetID
 from get_stats import GetStats
 import plotly.graph_objs as go
+from plotly import offline
 
 num_of_players = int(input("Welcome! Please enter the number of players you'd like to analyze." +
                            " You can only analyze up to 10: "))
@@ -34,4 +35,16 @@ for number in range(num_of_players):
             players_stats.append(get_stats_instance.stats_dict)
 
 fig = go.Figure([go.Bar(x=players_names, y=[player['PTS'] for player in players_stats])])
-fig.show()
+fig.update_layout(title_text="Average PPG for a Player's Career",
+                  xaxis=dict(
+                      title='NBA Players',
+                      titlefont_size=14,
+                      tickfont_size=14,
+                  ),
+                  yaxis=dict(
+                      title='Points Per Game (PPG)',
+                      titlefont_size=14,
+                      tickfont_size=14,
+                  ),)
+
+offline.plot(fig, filename='data/plot_NBA.html')
