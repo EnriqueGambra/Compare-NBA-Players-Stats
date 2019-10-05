@@ -11,7 +11,7 @@ if num_of_players > 10:
     quit()
 
 # Lists for the playersIDs and corresponding names
-players_IDs, players_names, players_stats = [], [], []
+players_IDs, players_names, players_stats, all_stats = [], [], [], []
 
 # Loops through until the 'q' key is pressed or it reaches the number of players the user desired
 for number in range(num_of_players):
@@ -34,17 +34,31 @@ for number in range(num_of_players):
             get_stats_instance = GetStats(player_id)
             players_stats.append(get_stats_instance.stats_dict)
 
-fig = go.Figure([go.Bar(x=players_names, y=[player['PTS'] for player in players_stats])])
-fig.update_layout(title_text="Average PPG for a Player's Career",
-                  xaxis=dict(
-                      title='NBA Players',
-                      titlefont_size=14,
-                      tickfont_size=14,
-                  ),
-                  yaxis=dict(
-                      title='Points Per Game (PPG)',
-                      titlefont_size=14,
-                      tickfont_size=14,
-                  ),)
+data = [{
+    'type': 'bar',
+    'x': players_names,
+    'y': [player['PTS'] for player in players_stats],
+    'marker':
+        {
+            'color': 'rgb(60, 100, 150)',
+            'line': {'width': 1.5, 'color': 'rgb(25, 25, 25)'},
+        },
+}]
 
+my_layout = {
+    'title': "Average PPG for a Player's Career",
+    'titlefont': {'size': 28},
+    'xaxis': {
+        'title': "Player Names",
+        'titlefont': {'size': 24},
+        'tickfont': {'size': 14},
+    },
+    'yaxis': {
+        'title': "Points Per Game (PPG)",
+        'titlefont': {'size': 24},
+        'tickfont': {'size': 14},
+    },
+}
+
+fig = {'data': data, 'layout': my_layout}
 offline.plot(fig, filename='data/plot_NBA.html')
