@@ -1,5 +1,6 @@
 from get_id import GetID
 from get_stats import GetStats
+import plotly.graph_objs as go
 
 num_of_players = int(input("Welcome! Please enter the number of players you'd like to analyze." +
                            " You can only analyze up to 10: "))
@@ -32,4 +33,5 @@ for number in range(num_of_players):
             get_stats_instance = GetStats(player_id)
             players_stats.append(get_stats_instance.stats_dict)
 
-
+fig = go.Figure([go.Bar(x=players_names, y=[player['PTS'] for player in players_stats])])
+fig.show()
