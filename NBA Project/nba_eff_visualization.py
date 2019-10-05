@@ -1,4 +1,5 @@
 from get_id import GetID
+from get_stats import GetStats
 
 num_of_players = int(input("Welcome! Please enter the number of players you'd like to analyze." +
                            " You can only analyze up to 10: "))
@@ -8,7 +9,7 @@ if num_of_players > 10:
     quit()
 
 # Lists for the playersIDs and corresponding names
-players_IDs, players_names = [], []
+players_IDs, players_names, players_stats = [], [], []
 
 # Loops through until the 'q' key is pressed or it reaches the number of players the user desired
 for number in range(num_of_players):
@@ -27,3 +28,8 @@ for number in range(num_of_players):
         else:
             players_IDs.append(player_id)
             players_names.append(player_name)
+
+            get_stats_instance = GetStats(player_id)
+            players_stats.append(get_stats_instance.stats_dict)
+
+
